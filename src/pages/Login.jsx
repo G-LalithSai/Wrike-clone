@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = () => {
+const Login = ({ screenWidth }) => {
   return <div>Login</div>;
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Resources = () => {
+const Resources = ({ screenWidth }) => {
   return <div>Resources</div>;
 };
 

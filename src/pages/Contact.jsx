@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contact = () => {
+const Contact = ({ screenWidth }) => {
   return <div>Contact</div>;
 };
 
