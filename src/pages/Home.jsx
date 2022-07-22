@@ -2,6 +2,11 @@ import React from "react";
 import { AiOutlinePlayCircle } from "react-icons/ai";
 import { BiRightArrowAlt } from "react-icons/bi";
 import Carousel, { CarouselItem } from "../components/shared/Carousel";
+import QuoteCard from "../components/Cards/QuoteCard";
+import {
+  BannerImageCard,
+  BannerTextCard,
+} from "../components/Cards/BannerCard";
 
 const Data = [
   {
@@ -49,6 +54,9 @@ const Data = [
   },
 ];
 
+const quotesLogo =
+  "data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%2264%22%20viewBox%3D%220%200%20100%2064%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%3Cpath%20d%3D%22M0%2024.32C0%2010.8884%2010.7226%200%2023.9496%200C37.1766%200%2047.8992%2010.8884%2047.8992%2024.32V40.1067H0V24.32Z%22%20fill%3D%22%2308cf65%22%2F%3E%20%3Cpath%20d%3D%22M52.1008%2024.32C52.1008%2010.8884%2062.8234%200%2076.0504%200C89.2774%200%20100%2010.8884%20100%2024.32V40.1067H52.1008V24.32Z%22%20fill%3D%22%2308cf65%22%2F%3E%20%3Cpath%20d%3D%22M21.9512%2064H22.7574C36.6805%2064%2047.9675%2052.5385%2047.9675%2038.4V30.72H21.9512V64Z%22%20fill%3D%22%2308cf65%22%2F%3E%20%3Cpath%20d%3D%22M73.9837%2064H74.7899C88.7131%2064%20100%2052.5385%20100%2038.4V30.72H73.9837V64Z%22%20fill%3D%22%2308cf65%22%2F%3E%20%3C%2Fsvg%3E%20";
+
 const companies = [
   {
     logo: "https://web-static.wrike.com/content/uploads/2020/09/1440_logoroll_logo_white_google.svg?av=beca5f4cceefb37ded0e3f6cea1d2c34",
@@ -84,6 +92,78 @@ const companies = [
   },
 ];
 
+const BannerData = [
+  {
+    banner: {
+      title: "WORK YOUR WAY",
+      heading: "Tailored to your needs, not the other way around",
+      description:
+        "Customize Wrike to best suit your organization. From custom dashboards and workflows to team-specific automation to streamline processes, Wrike has everything you need to work your way. No one else offers this level of versatility.",
+      image:
+        "https://web-static.wrike.com/cdn-cgi/image/width=704,fit=cover,format=auto,q=80/content/uploads/2020/06/rebrand-screenshot_custom-statuces-workflows_2x.png?av=30d697d3e8e3a5bc8494e184b75ff082",
+      link: "Learn more",
+    },
+    quote: {
+      description:
+        "Having a single source of truth for information and communication makes it easy for leadership to stay in the loop or get a new team member up to speed quickly. It mitigates the risk of tasks falling through the cracks.",
+      department:
+        "Shaun Carlson, Director of R&D and Continuous Innovation, Arvig",
+      logo: "https://web-static.wrike.com/content/uploads/2021/02/rebrand-quote_logo_white_arvig.svg?av=87b582e470c7fd63e7c8d57152682a5e",
+    },
+  },
+  {
+    banner: {
+      title: "COLLABORATE ACROSS TEAMS",
+      heading: "Work in real-time across your entire org",
+      description:
+        "Eliminate endless email threads, needless meetings, and copious check-ins with real-time commenting and notifications, live editing, dynamic reports, and more. Best of all? Information can easily be shared with all stakeholders at any time.",
+      image:
+        "https://web-static.wrike.com/cdn-cgi/image/width=704,fit=cover,format=auto,q=80/content/uploads/2020/11/rebrand-screenshot_commenting_2x.png?av=8760554efd5d8731bfcbbbd41dc2778f",
+      link: "Learn more",
+    },
+    quote: {
+      description:
+        "Collaboration has improved dramatically, not because the people have changed — we've always wanted to help, but now we have a tool that allows us to figure out how we can help each other better.",
+      department: "Katy Scott, Digital Learning Manager, Monterey Bay Aquarium",
+      logo: "https://web-static.wrike.com/content/uploads/2021/02/rebrand-quote_logo_white_monterey-bay.svg?av=1dc75eabdbe6724b6e35f7188d1092f3",
+    },
+  },
+  {
+    banner: {
+      title: "GET END-TO-END VISIBILITY",
+      heading: "Always be prepared for what’s next",
+      description:
+        "Get real-time updates and see potential roadblocks before they happen. Drill down to individual tasks or zoom out for a holistic view of everything in your portfolio. With Wrike, you’ll always have what you need to deliver more projects, faster.",
+      image:
+        "https://web-static.wrike.com/cdn-cgi/image/width=704,fit=cover,format=auto,q=80/content/uploads/2020/06/rebrand-screenshot_kanban-and-gantt_2x.png?av=ecbb4f0a5a6d11d03dbd171cf4cbbc65",
+      link: "Take a tour of Wrike",
+    },
+    quote: {
+      description:
+        "We work faster, update key dates for deliverables much more quickly, and eliminate human error. We’ve likely saved around 200 or more hours per year in our launch prep.",
+      department: "Brynne Roberts, Director of Creative Operations, Fitbit",
+      logo: "https://web-static.wrike.com/content/uploads/2022/07/rebrand-quote_logo_fitbit_white.svg?av=0cb6037be9d0e4a093d64845f45e4b1d",
+    },
+  },
+  {
+    banner: {
+      title: "BE THE MASTER OF YOUR DATA",
+      heading: "Take advantage of our industry-leading security",
+      description:
+        "Get all the advantages of a cloud-based work management platform with the security you’d expect from an on-premises system. Our enterprise-grade security is unparalleled, and gives you full control over your data.",
+      image:
+        "https://web-static.wrike.com/cdn-cgi/image/width=704,fit=cover,format=auto,q=80/content/uploads/2021/02/rebrand-screenshot_lock-scheme-dark_2x.png?av=218f3f68dd82f70666a239a60591d99b",
+      link: "Be secure with Wrike",
+    },
+    quote: {
+      description:
+        "I am so glad that we have Wrike as opposed to having information in hundreds of spreadsheets going around thousands of emails or worse, just in people’s heads.",
+      department: "Dave Rorke, Project Officer, University of New South Wales",
+      logo: "https://web-static.wrike.com/content/uploads/2021/02/rebrand-quote-logo_white_unsw-sydney.svg?av=cf883813870f9a9b9a089b0de89c24d9",
+    },
+  },
+];
+
 const Home = ({ screenWidth }) => {
   const desktopViewHeader = {
     position: "absolute",
@@ -114,6 +194,7 @@ const Home = ({ screenWidth }) => {
         color: "#eee",
       }}
     >
+      {/* Head */}
       <div>
         <div style={screenWidth >= 1024 ? desktopViewHeader : mobileViewHeader}>
           <h1 style={{ margin: "1.5rem 0" }}>
@@ -173,25 +254,75 @@ const Home = ({ screenWidth }) => {
           )}
         </>
       </div>
+      {/* companies */}
       <div style={{ backgroundColor: "#181f39", marginTop: "-5px" }}>
-        <p style={{ textAlign: "center", padding: "2rem" }}>
+        <h4 style={{ textAlign: "center", padding: "2rem" }}>
           TRUSTED BY 20,000+ HAPPY CUSTOMERS WORLDWIDE
-        </p>
+        </h4>
         <div
           style={{
             display: "flex",
-            justifyContent: "space-evenly",
-            padding: "1rem",
+            padding: "2rem",
+            flexWrap: "wrap",
           }}
         >
           {companies.map((company, index) => (
-            <div key={index}>
+            <div style={{ margin: "1rem" }} key={index}>
               <img src={company.logo} alt={company.company} />
             </div>
           ))}
         </div>
+        {/* Banner */}
+        <div
+          style={
+            screenWidth >= 1024
+              ? {
+                  display: "grid",
+                  padding: "2rem 8rem",
+                  paddingBottom: "5rem",
+                  gridTemplateColumns: "50% 50%",
+                }
+              : {
+                  display: "flex",
+                  padding: "2rem 8rem",
+                  paddingBottom: "5rem",
+                  flexDirection: "column",
+                }
+          }
+        >
+          <div>
+            <img
+              src="https://web-static.wrike.com/cdn-cgi/image/width=704,fit=cover,format=auto,q=80/content/uploads/2022/06/promo-ebook_Dark-Matter-of-Work_Dark-theme_2x.png?av=153921f8a3b563eddf08828774c378ba"
+              alt="report"
+              style={{ width: "100%" }}
+            />
+          </div>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <div style={{ lineHeight: "2rem", padding: "4rem" }}>
+              <h2 style={{ marginBottom: "2rem" }}>
+                Without a single source of truth for work, it could cost you.
+              </h2>
+              <p style={{ marginBottom: "3rem" }}>
+                New research from Wrike sheds light on the hidden cost of modern
+                work complexities caused by low visibility, wasted time, project
+                delays, and employee churn. The results are staggering.
+              </p>
+              <h4
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  color: "#07cf65",
+                }}
+              >
+                Download free report{" "}
+                <BiRightArrowAlt style={{ margin: "0px 10px" }} />
+              </h4>
+            </div>
+          </div>
+        </div>
       </div>
-      <div style={{ backgroundColor: "#04444d", padding: "2rem" }}>
+      {/* Carousel */}
+      <div style={{ backgroundColor: "#04444d", padding: "2rem 8rem" }}>
         <h1 style={{ textAlign: "center", marginBottom: "4rem" }}>
           Stories from our customers
         </h1>
@@ -199,15 +330,23 @@ const Home = ({ screenWidth }) => {
           {Data.map((item, index) => (
             <CarouselItem key={index}>
               <div
-                style={{
-                  display: "grid",
-                  color: "wheat",
-                  gridTemplateColumns: "50% 50%",
-                }}
+                style={
+                  screenWidth >= 1024
+                    ? {
+                        display: "grid",
+                        color: "wheat",
+                        gridTemplateColumns: "50% 50%",
+                        padding: "2rem 0",
+                      }
+                    : {
+                        display: "flex",
+                        flexDirection: "column",
+                      }
+                }
               >
                 <div
                   style={{
-                    padding: "2rem",
+                    padding: screenWidth >= 1024 ? "2rem" : "1rem",
                     display: "flex",
                     alignItems: "center",
                   }}
@@ -278,7 +417,228 @@ const Home = ({ screenWidth }) => {
           ))}
         </Carousel>
       </div>
-      <div></div>
+      {/* Banners */}
+      <div style={{ backgroundColor: "#0c3245", padding: "3rem 0" }}>
+        <div style={{ textAlign: "center", padding: "3rem" }}>
+          <h1 style={{ marginBottom: "3rem" }}>
+            Transform the way your teams work
+          </h1>
+          <h3>
+            Empower your teams to do the best work of their lives with 360°
+            visibility, true cross-departmental collaboration, and powerful
+            automation.
+          </h3>
+        </div>
+        <div style={{ padding: "0 8rem" }}>
+          {BannerData.map((item, index) => (
+            <div key={index}>
+              <div>
+                <QuoteCard quotesLogo={quotesLogo} quote={item.quote} />
+              </div>
+              <>
+                {screenWidth > 1024 ? (
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    {index % 2 === 0 ? (
+                      <>
+                        <BannerTextCard
+                          link={item.banner.link}
+                          description={item.banner.description}
+                          heading={item.banner.heading}
+                          title={item.banner.title}
+                        />
+                        <BannerImageCard
+                          screenWidth={screenWidth}
+                          image={item.banner.image}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <BannerImageCard image={item.banner.image} />
+                        <BannerTextCard
+                          link={item.banner.link}
+                          description={item.banner.description}
+                          heading={item.banner.heading}
+                          title={item.banner.title}
+                        />
+                      </>
+                    )}
+                  </div>
+                ) : (
+                  <>
+                    <BannerImageCard image={item.banner.image} />
+                    <BannerTextCard
+                      link={item.banner.link}
+                      description={item.banner.description}
+                      heading={item.banner.heading}
+                      title={item.banner.title}
+                    />
+                  </>
+                )}
+              </>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* Foot */}
+      <div style={{ backgroundColor: "#181f39" }}>
+        {screenWidth >= 1280 ? (
+          <div
+            style={{
+              display: "grid",
+              padding: "8rem",
+              gridTemplateColumns: "50% 50%",
+            }}
+          >
+            <div style={{ padding: "2rem" }}>
+              <h1 style={{ margin: "2rem 0" }}>
+                Integrate with the tools you already use
+              </h1>
+              <p style={{ lineHeight: "2rem", fontSize: "1.5rem" }}>
+                Connect your essential business tools to Wrike and make it your
+                project control center. Google, Microsoft, Adobe® Creative
+                Cloud®, Box, GitHub, JIRA, and many more.
+              </p>
+              <p
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  color: "#08b85a",
+                }}
+              >
+                <span style={{ fontSize: "1.5rem" }}>
+                  See all apps & integrations{" "}
+                </span>
+                <BiRightArrowAlt
+                  style={{
+                    fontSize: "1.3rem",
+                    marginLeft: "1rem",
+                  }}
+                />
+              </p>
+            </div>
+            <div style={{ width: "100%", padding: "1rem", overflow: "hidden" }}>
+              <img
+                src="https://web-static.wrike.com/content/uploads/2022/04/rebrand-promo-integrations_colored-bg_tablet-mobile.svg?av=e426b481d56a93be469ece759c26fc0f"
+                alt="logos"
+                style={{ minWidth: "100%" }}
+              />
+            </div>
+          </div>
+        ) : (
+          <div>
+            <div style={{ padding: "2rem 0" }}>
+              <img
+                src="https://web-static.wrike.com/content/uploads/2022/04/rebrand-promo-integrations_colored-bg_tablet-mobile.svg?av=e426b481d56a93be469ece759c26fc0f"
+                alt="logos"
+                style={{ maxWidth: "100%" }}
+              />
+            </div>
+            <div style={{ padding: "4rem 8rem" }}>
+              <h1 style={{ margin: "2rem 0" }}>
+                Integrate with the tools you already use
+              </h1>
+              <p style={{ lineHeight: "2rem", fontSize: "1.5rem" }}>
+                Connect your essential business tools to Wrike and make it your
+                project control center. Google, Microsoft, Adobe® Creative
+                Cloud®, Box, GitHub, JIRA, and many more.
+              </p>
+              <p
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  color: "#08b85a",
+                }}
+              >
+                <span style={{ fontSize: "1.5rem" }}>
+                  See all apps & integrations{" "}
+                </span>
+                <BiRightArrowAlt
+                  style={{
+                    fontSize: "1.3rem",
+                    marginLeft: "1rem",
+                  }}
+                />
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+      {/* Email trial */}
+      <div
+        style={{
+          display: "flex",
+          backgroundColor: "#0c3245",
+          justifyContent: "space-between",
+          width: "100%",
+          overflow: "hidden",
+        }}
+      >
+        <div style={{ display: screenWidth >= 1024 ? "block" : "none" }}>
+          <img
+            src="https://web-static.wrike.com/content/uploads/2020/11/rebrand-cta-center-1_left_darkgreen_1x-1.png"
+            alt="design"
+            style={{ width: "100%" }}
+          />
+        </div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <div style={{ textAlign: "center" }}>
+            <h1 style={{ marginBottom: "2rem" }}>Unlock the possibilities</h1>
+            <p>
+              Work As One™. Experience effortless collaboration with Wrike’s
+              work management platform.
+            </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "2rem",
+                gap: "10px",
+              }}
+            >
+              <div>
+                <div style={{ position: "relative" }}>
+                  <input
+                    style={{
+                      padding: "1rem 2rem",
+                      fontSize: "1rem",
+                      borderRadius: "10px",
+                      border: "none",
+                    }}
+                    type="email"
+                    placeholder="Enter Business Email"
+                  />
+                </div>
+              </div>
+              <div>
+                <button
+                  style={{
+                    padding: "1rem 2rem",
+                    color: "#e1e1e1",
+                    backgroundColor: "#0fbf5f",
+                    border: "none",
+                    fontSize: "1rem",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Start free trial
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{ display: screenWidth >= 1024 ? "block" : "none" }}>
+          <img
+            src="https://web-static.wrike.com/content/uploads/2021/02/cta-center-1_right_darkgreen_1x.png"
+            alt="design"
+            style={{ width: "100%" }}
+          />
+        </div>
+      </div>
     </div>
   );
 };
