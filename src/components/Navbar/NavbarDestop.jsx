@@ -8,7 +8,7 @@ import {
   AiOutlineArrowRight,
 } from "react-icons/ai";
 import "./NavbarDesktop.css";
-const NavbarDestop = ({ scrollVisible }) => {
+const NavbarDestop = ({ scrollVisible, handleVisibility }) => {
   const [hoverProduct, setHoverProduct] = useState(false);
   const [hoverSolution, setHoverSolution] = useState(false);
   const [hoverResources, setHoverResources] = useState(false);
@@ -296,10 +296,7 @@ const NavbarDestop = ({ scrollVisible }) => {
           </>
         )}
         <li className="sign-up">
-          <button
-            onClick={() => setScrollVisible(true)}
-            className="navbar-button"
-          >
+          <button onClick={handleVisibility} className="navbar-button">
             Start for free
           </button>
         </li>
