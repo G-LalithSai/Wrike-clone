@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar";
 import Home from "./Home";
 import Products from "./Products";
 import Pricing from "./Pricing";

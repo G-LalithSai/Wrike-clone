@@ -17,6 +17,10 @@ const Navbar = ({ screenWidth }) => {
       document.documentElement.scrollTop > 700 ? "#181f39" : "#0c3245"
     );
   }
+
+  const handleVisibility = () => {
+    setScrollVisible(true);
+  };
   return (
     <nav
       style={{
@@ -32,7 +36,10 @@ const Navbar = ({ screenWidth }) => {
       }}
     >
       {screenWidth >= 1280 ? (
-        <NavbarDestop scrollVisible={scrollVisible} />
+        <NavbarDestop
+          handleVisibility={handleVisibility}
+          scrollVisible={scrollVisible}
+        />
       ) : (
         <NavbarMobile
           scrollVisible={scrollVisible}

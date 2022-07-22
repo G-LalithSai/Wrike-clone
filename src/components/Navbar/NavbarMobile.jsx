@@ -8,7 +8,6 @@ import {
   AiOutlinePlayCircle,
   AiFillCaretDown,
   AiFillCaretUp,
-  AiOutlineArrowRight,
 } from "react-icons/ai";
 
 const NavbarMobile = ({ navbarBackground, scrollVisible, screenWidth }) => {
