@@ -24,7 +24,7 @@ const Navbar = ({ screenWidth }) => {
   return (
     <nav
       style={{
-        width: "100%",
+        width: "100vw",
         backgroundColor: navbarBackground,
         display: "flex",
         alignItems: "center",

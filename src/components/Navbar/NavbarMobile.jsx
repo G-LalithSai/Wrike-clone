@@ -29,11 +29,12 @@ const NavbarMobile = ({ navbarBackground, scrollVisible, screenWidth }) => {
         }}
       >
         <Logo color={!hamburgerView ? "#000" : "#fff"} />
-        {scrollVisible && (
+        {scrollVisible && screenWidth >= 1024 ? (
           <div
             style={{
               display: "flex",
               justifyContent: "center",
+              padding: "2rem",
               alignItems: "center",
               gap: "5px",
             }}
@@ -52,7 +53,7 @@ const NavbarMobile = ({ navbarBackground, scrollVisible, screenWidth }) => {
             />
             <button className="navbar-button">Start for free</button>
           </div>
-        )}
+        ) : null}
         <div
           style={{
             display: "flex",

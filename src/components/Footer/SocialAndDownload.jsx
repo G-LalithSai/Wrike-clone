@@ -21,6 +21,7 @@ const SocialAndDownload = ({ screenWidth }) => {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            flexWrap: screenWidth <= 680 ? "wrap" : "nowrap",
           }}
         >
           <div style={{ display: "flex", columnGap: "2rem" }}>
@@ -35,7 +36,14 @@ const SocialAndDownload = ({ screenWidth }) => {
               width="150px"
             />
           </div>
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              margin: "1rem auto",
+            }}
+          >
             <BsTwitter style={{ margin: "0 1rem" }} />
             <BsFacebook style={{ margin: "0 1rem" }} />
             <FaLinkedinIn style={{ margin: "0 1rem" }} />
