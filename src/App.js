@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import AllRoutes from "./pages/AllRoutes";
 
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <Navbar screenWidth={screenWidth} />
       <AllRoutes screenWidth={screenWidth} />
+      <Footer screenWidth={screenWidth} />
     </div>
   );
 }
