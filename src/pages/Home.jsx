@@ -262,8 +262,9 @@ const Home = ({ screenWidth }) => {
         <div
           style={{
             display: "flex",
-            padding: "2rem",
             flexWrap: "wrap",
+            justifyContent: "space-between",
+            padding: screenWidth >= 1440 ? "2rem 8rem" : "2rem",
           }}
         >
           {companies.map((company, index) => (
@@ -278,14 +279,12 @@ const Home = ({ screenWidth }) => {
             screenWidth >= 1024
               ? {
                   display: "grid",
-                  padding: "2rem 8rem",
-                  paddingBottom: "5rem",
+                  padding: "3rem 8rem",
                   gridTemplateColumns: "50% 50%",
                 }
               : {
                   display: "flex",
-                  padding: "2rem 8rem",
-                  paddingBottom: "5rem",
+                  padding: "2rem",
                   flexDirection: "column",
                 }
           }
@@ -298,7 +297,7 @@ const Home = ({ screenWidth }) => {
             />
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
-            <div style={{ lineHeight: "2rem", padding: "4rem" }}>
+            <div style={{ lineHeight: "2rem", padding: "4rem 2rem" }}>
               <h2 style={{ marginBottom: "2rem" }}>
                 Without a single source of truth for work, it could cost you.
               </h2>
@@ -322,8 +321,13 @@ const Home = ({ screenWidth }) => {
         </div>
       </div>
       {/* Carousel */}
-      <div style={{ backgroundColor: "#04444d", padding: "2rem 8rem" }}>
-        <h1 style={{ textAlign: "center", marginBottom: "4rem" }}>
+      <div
+        style={{
+          backgroundColor: "#04444d",
+          padding: screenWidth >= 1440 ? "4rem 10rem" : "2rem",
+        }}
+      >
+        <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>
           Stories from our customers
         </h1>
         <Carousel>
@@ -336,7 +340,6 @@ const Home = ({ screenWidth }) => {
                         display: "grid",
                         color: "wheat",
                         gridTemplateColumns: "50% 50%",
-                        padding: "2rem 0",
                       }
                     : {
                         display: "flex",
@@ -346,7 +349,7 @@ const Home = ({ screenWidth }) => {
               >
                 <div
                   style={{
-                    padding: screenWidth >= 1024 ? "2rem" : "1rem",
+                    padding: screenWidth >= 1440 ? "2rem 0" : "0 4rem",
                     display: "flex",
                     alignItems: "center",
                   }}
@@ -359,7 +362,7 @@ const Home = ({ screenWidth }) => {
                 </div>
                 <div
                   style={{
-                    padding: "2rem",
+                    padding: screenWidth >= 1440 ? "0 6rem" : "0 4rem",
                     display: "flex",
                     alignItems: "center",
                   }}
@@ -418,7 +421,12 @@ const Home = ({ screenWidth }) => {
         </Carousel>
       </div>
       {/* Banners */}
-      <div style={{ backgroundColor: "#0c3245", padding: "3rem 0" }}>
+      <div
+        style={{
+          backgroundColor: "#0c3245",
+          padding: screenWidth >= 1440 ? "4rem 8rem" : "3rem 2rem",
+        }}
+      >
         <div style={{ textAlign: "center", padding: "3rem" }}>
           <h1 style={{ marginBottom: "3rem" }}>
             Transform the way your teams work
@@ -429,7 +437,7 @@ const Home = ({ screenWidth }) => {
             automation.
           </h3>
         </div>
-        <div style={{ padding: "0 8rem" }}>
+        <div style={{ padding: screenWidth >= 1440 ? "3rem 0" : "2rem 0" }}>
           {BannerData.map((item, index) => (
             <div key={index}>
               <div>
@@ -485,12 +493,17 @@ const Home = ({ screenWidth }) => {
         </div>
       </div>
       {/* Foot */}
-      <div style={{ backgroundColor: "#181f39" }}>
+      <div
+        style={{
+          backgroundColor: "#181f39",
+          padding: screenWidth >= 1440 ? "4rem 6rem" : "4rem 2rem",
+        }}
+      >
         {screenWidth >= 1280 ? (
           <div
             style={{
               display: "grid",
-              padding: "8rem",
+              padding: "8rem 0",
               gridTemplateColumns: "50% 50%",
             }}
           >
@@ -538,7 +551,7 @@ const Home = ({ screenWidth }) => {
                 style={{ maxWidth: "100%" }}
               />
             </div>
-            <div style={{ padding: "4rem 8rem" }}>
+            <div style={{ padding: "4rem 0" }}>
               <h1 style={{ margin: "2rem 0" }}>
                 Integrate with the tools you already use
               </h1>
@@ -573,20 +586,29 @@ const Home = ({ screenWidth }) => {
         style={{
           display: "flex",
           backgroundColor: "#0c3245",
-          justifyContent: "space-between",
+          justifyContent: screenWidth > 1440 ? "space-between" : "center",
           width: "100%",
           overflow: "hidden",
+          padding: "4rem 0",
         }}
       >
         <div style={{ display: screenWidth >= 1024 ? "block" : "none" }}>
           <img
             src="https://web-static.wrike.com/content/uploads/2020/11/rebrand-cta-center-1_left_darkgreen_1x-1.png"
             alt="design"
-            style={{ width: "100%" }}
+            style={{ width: "80%" }}
           />
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <div style={{ textAlign: "center" }}>
+          <div
+            style={{
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <h1 style={{ marginBottom: "2rem" }}>Unlock the possibilities</h1>
             <p>
               Work As One™. Experience effortless collaboration with Wrike’s
@@ -605,7 +627,7 @@ const Home = ({ screenWidth }) => {
                   <input
                     style={{
                       padding: "1rem 2rem",
-                      fontSize: "1rem",
+                      fontSize: screenWidth >= 1280 ? "1rem" : "0.75rem",
                       borderRadius: "10px",
                       border: "none",
                     }}
@@ -621,7 +643,7 @@ const Home = ({ screenWidth }) => {
                     color: "#e1e1e1",
                     backgroundColor: "#0fbf5f",
                     border: "none",
-                    fontSize: "1rem",
+                    fontSize: screenWidth >= 1280 ? "1rem" : "0.75rem",
                     borderRadius: "10px",
                   }}
                 >
@@ -635,7 +657,7 @@ const Home = ({ screenWidth }) => {
           <img
             src="https://web-static.wrike.com/content/uploads/2021/02/cta-center-1_right_darkgreen_1x.png"
             alt="design"
-            style={{ width: "100%" }}
+            style={{ width: "80%" }}
           />
         </div>
       </div>
