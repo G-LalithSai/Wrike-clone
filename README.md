@@ -17,6 +17,14 @@ Wrike is a work management software.
 
 #### Homepage (Desktop mode)
 
+![home1](images/homepage%201%20[desktop].png)
+
+![home2](images/homepage%202%20[desktop].png)
+
 ---
 
 #### Homepage (Mobile mode)
+
+![mobile1](images/homepage%201%20mobile.png)
+
+![mobile2](images/homepage%202%20mobile.png)
